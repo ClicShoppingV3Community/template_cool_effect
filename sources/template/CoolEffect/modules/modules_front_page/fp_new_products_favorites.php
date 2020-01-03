@@ -322,10 +322,10 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Souhaitez-vous afficher le titre ?',
+          'configuration_title' => 'Do you want to display the title?',
           'configuration_key' => 'MODULE_FRONT_PAGE_PRODUCTS_FAVORITES_FRONT_TITLE',
           'configuration_value' => 'True',
-          'configuration_description' => 'Affiche le titre du module dans le catalogue<br /><br /><i>(Valeur True = Oui - Valeur False = Non</i>)',
+          'configuration_description' => 'Displays the title of the module in the catalog',
           'configuration_group_id' => '6',
           'sort_order' => '3',
           'set_function' => 'clic_cfg_set_boolean_value(array(\'True\', \'False\'))',
@@ -346,10 +346,10 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Veuillez indiquer le nombre de colonnes de produit que vous souhaitez voir affiché  ?',
+          'configuration_title' => 'Please indicate the number of product columns you would like displayed?',
           'configuration_key' => 'MODULE_FRONT_PAGE_PRODUCTS_FAVORITES_COLUMNS',
           'configuration_value' => '6',
-          'configuration_description' => 'Veuillez indiquer le nombre de colonnes de produit à afficher par ligne.<br /><br />Note:<br /><br />- Entre 1 et 12',
+          'configuration_description' => 'Please indicate the number of product columns to display per line. <br /> <br /> Note: <br /> <br /> - Between 1 and 12',
           'configuration_group_id' => '6',
           'sort_order' => '6',
           'set_function' => 'clic_cfg_set_content_module_width_pull_down',
@@ -358,10 +358,10 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Souhaitez vous afficher une description courte des produits dans la page ?',
+          'configuration_title' => 'Do you want to display a short description of the products on the page?',
           'configuration_key' => 'MODULE_FRONT_PAGE_PRODUCTS_FAVORITES_SHORT_DESCRIPTION',
           'configuration_value' => '0',
-          'configuration_description' => 'Veuillez indiquer la longueur de cette description.<br /><br /><i>- 0 pour aucune description<br>- 50 pour les 50 premiers caractères</i>',
+          'configuration_description' => 'Please indicate the length of this description. <br /> <br /> <i> - 0 for no description <br> - 50 for the first 50 characters </i>',
           'configuration_group_id' => '6',
           'sort_order' => '7',
           'set_function' => '',
@@ -370,10 +370,10 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Souhaitez-vous supprimer une certaine longeur de texte descriptif ',
+          'configuration_title' => 'Do you want to delete a certain length of descriptive text?',
           'configuration_key' => 'MODULE_FRONT_PAGE_PRODUCTS_FAVORITES_SHORT_DESCRIPTION_DELETE_WORLDS',
           'configuration_value' => '0',
-          'configuration_description' => 'Veuillez indiquer le nombre de mots à supprimer. Ce système est utile avec le module des onglets<br /><br /><i>- 0 pour aucune suppression<br>- 50 pour les 50 premiers caractères</i>',
+          'configuration_description' => 'Please indicate the number of words to delete. This system is useful with the tab module <br /> <br /> <i> - 0 for no deletion <br /> - 50 for the first 50 characters </i>',
           'configuration_group_id' => '6',
           'sort_order' => '8',
           'set_function' => '',
@@ -394,10 +394,10 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Souhaitez-vous afficher le pourcentage de réduction du prix (promotion) ?',
+          'configuration_title' => 'Would you like to display the percentage reduction of the price (special) ?',
           'configuration_key' => 'MODULE_FRONT_PAGE_PRODUCTS_FAVORITES_POURCENTAGE_TICKER',
           'configuration_value' => 'False',
-          'configuration_description' => 'Afficher le pourcentage de réduction du prix<br><i>(Valeur true = Oui - Valeur false = Non)</i>',
+          'configuration_description' => 'Show the percentage reduction of the price',
           'configuration_group_id' => '6',
           'sort_order' => '9',
           'set_function' => 'clic_cfg_set_boolean_value(array(\'True\', \'False\'))',
@@ -406,10 +406,10 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Souhaitez-vous afficher une image concernant l\'état du stock du produit ?',
+          'configuration_title' => 'Would you like to display an image regarding the stock status of the product ?',
           'configuration_key' => 'MODULE_FRONT_PAGE_PRODUCTS_FAVORITES_DISPLAY_STOCK',
           'configuration_value' => 'none',
-          'configuration_description' => 'Est-que vous souhaitez afficher une image indiquant une information sur le stock du produit (En stock, pratiquement épuisé, hors stock) ?',
+          'configuration_description' => 'Do you want to display an image indicating information on the stock of the product (In stock, practically sold out, out of stock) ?',
           'configuration_group_id' => '6',
           'sort_order' => '10',
           'set_function' => 'clic_cfg_set_boolean_value(array(\'none\', \'image\', \'number\'))',
@@ -418,10 +418,10 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Veuillez choisir une taille d\'affichage de l\'image',
+          'configuration_title' => 'Please choose an image display size',
           'configuration_key' => 'MODULE_FRONT_PAGE_PRODUCTS_FAVORITES_IMAGE_MEDIUM',
           'configuration_value' => 'Small',
-          'configuration_description' => 'Quelle taille d\'image souhaitez-vous afficher ?<br /><br /><i>(Valeur Small = Petite - Valeur Medium = Moyenne)</i>',
+          'configuration_description' => 'What image size do you want to display?',
           'configuration_group_id' => '6',
           'sort_order' => '11',
           'set_function' => 'clic_cfg_set_boolean_value(array(\'Small\', \'Medium\'))',
@@ -430,10 +430,10 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Souhaitez vous supprimer le bouton Acheter et Détail ?',
+          'configuration_title' => 'Do you want to delete the Buy and Retail button ?',
           'configuration_key' => 'MODULE_FRONT_PAGE_PRODDUCTS_FAVORITES_DELETE_BUY_BUTTON',
           'configuration_value' => 'False',
-          'configuration_description' => 'Supprimer le bouton acheter et détail',
+          'configuration_description' => 'Remove buy and retail button',
           'configuration_group_id' => '6',
           'sort_order' => '11',
           'set_function' => 'clic_cfg_set_boolean_value(array(\'True\', \'False\'))',

@@ -96,7 +96,7 @@
           $products_name = HTML::hiddenField('products_id[]', $products[$i]['id']);
           $products_name .= HTML::link($products_name_url, $products[$i]['name']);
 
-          $trash = HTML::link(CLICSHOPPING::link(null, 'Cart&Delete&products_id=' . $products[$i]['id']), HTML::image($CLICSHOPPING_Template->getDirectoryTemplateImages() . 'icons/delete.gif', CLICSHOPPING::getDef('button_remove'))) . '&nbsp;&nbsp;&nbsp;';
+          $trash = HTML::link(CLICSHOPPING::link(null, 'Cart&Delete&products_id=' . $products[$i]['id']), '<i class="fas fa-trash"></i>', CLICSHOPPING::getDef('button_remove')) . '&nbsp;&nbsp;&nbsp;';
           $image =  HTML::link($products_name_url, HTML::image($CLICSHOPPING_Template->getDirectoryTemplateImages() . $products[$i]['image'], $products[$i]['name'], 50, 50)) . '&nbsp;&nbsp;&nbsp;';
 
           if (STOCK_CHECK == 'true') {
@@ -124,20 +124,33 @@
             }
           }
 
-          if (isset($products[$i]['attributes']) && is_array($products[$i]['attributes'])) {
-            foreach($products[$i]['attributes'] as $option => $value) {
-              if (is_array($products[$i][$option]) && isset($products[$i][$option])) {
-                if (!is_null($products[$i][$option]['products_attributes_image'])) {
-                  if (is_file(CLICSHOPPING::getConfig('Shop') . $CLICSHOPPING_Template->getDirectoryTemplateImages() . $products[$i][$option]['products_attributes_image'])) {
-                    $products_attributes_image = HTML::image($CLICSHOPPING_Template->getDirectoryTemplateImages() . $products[$i][$option]['products_attributes_image'], $products[$i][$option]['products_attributes_values_name'] . '   ', 30, 30);
+          $products_attributes = '';
+
+          if (isset($products[$i]['attributes'])) {
+            if  (is_array($products[$i]['attributes'])) {
+              foreach($products[$i]['attributes'] as $option => $value) {
+                $products_attributes_values_name = '';
+                $products_attributes_reference = '';
+                $products_attributes_image = '';
+
+                if (is_array($products[$i][$option]) && isset($products[$i][$option])) {
+                  $products_attributes_values_name = $products[$i][$option]['products_attributes_values_name'];
+                  $products_attributes_reference = $products[$i][$option]['products_attributes_reference'];
+                  $products_attributes_image = $products[$i][$option]['products_attributes_image'];
+
+                  if (!is_null($products[$i][$option]['products_attributes_image'])) {
+
+                    if (is_file(CLICSHOPPING::getConfig('Shop') . $CLICSHOPPING_Template->getDirectoryTemplateImages() . $products_attributes_image)) {
+                      $products_attributes_image = HTML::image($CLICSHOPPING_Template->getDirectoryTemplateImages() . $products_attributes_image, $products_attributes_values_name . '   ', 30, 30);
+                    } else {
+                      $products_attributes_image = '     ';
+                    }
                   } else {
                     $products_attributes_image = '     ';
                   }
-                } else {
-                  $products_attributes_image = '     ';
-                }
 
-                $products_option .= '<p class="ModulesShoppingCartproductsListingOption"> - ' . $products_attributes_image . ' :  ' . $products[$i][$option]['products_attributes_values_name'] .  ' ('. $products[$i][$option]['products_attributes_reference'] .') ' . ' - ' .  $CLICSHOPPING_Currencies->displayPrice($products[$i][$option]['attributes_values_price'], $CLICSHOPPING_Tax->getTaxRate($products[$i]['tax_class_id']), '1') . '</p>';
+                  $products_attributes .= '<p class="ModulesShoppingCartproductsListingOption"> - ' . $products_attributes_image . ' :  ' . $products_attributes_values_name .  ' (' . $products_attributes_reference . ') ' . ' - ' .  $CLICSHOPPING_Currencies->displayPrice($products[$i][$option]['attributes_values_price'], $CLICSHOPPING_Tax->getTaxRate($products[$i]['tax_class_id']), '1') . '</p>';
+                }
               }
             }
           }
@@ -159,7 +172,7 @@
           $cart .='<div id="ShoppingCartImage" class="col-sm-2 hidden-xs">' . $image . '</div>';
           $cart .='<div class="col-sm-10">';
           $cart .='<p id="ShoppingCartProductsName" class="nomargin text-sm-left">' . $ticker . ' ' .  $products_name . '</p>';
-          $cart .='<p id="ShoppingCartProductsOptions" class="small">' . $products_option . '</p>';
+          $cart .='<p id="ShoppingCartProductsOptions" class="small">' . $products_attributes . '</p>';
           $cart .='</div>';
           $cart .='</div>';
           $cart .='</td>';
@@ -206,10 +219,10 @@
       $CLICSHOPPING_Db = Registry::get('Db');
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Do you want activate this module ?',
+          'configuration_title' => 'Do you want to enable this module ?',
           'configuration_key' => 'MODULE_SHOPPING_CART_PRODUCTS_LISTING_STATUS',
           'configuration_value' => 'True',
-          'configuration_description' => 'Do you want activate this module in your shop ?',
+          'configuration_description' => 'Do you want to enable this module in your shop ?',
           'configuration_group_id' => '6',
           'sort_order' => '1',
           'set_function' => 'clic_cfg_set_boolean_value(array(\'True\', \'False\'))',
@@ -218,7 +231,7 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Veuillez selectionner la largeur de votre listing ?',
+          'configuration_title' => 'Please select the width of your listing ?',
           'configuration_key' => 'MODULE_SHOPPING_CART_PRODUCTS_LISTING_CONTENT_WIDTH',
           'configuration_value' => '12',
           'configuration_description' => 'Select a number between 1 and 12',
@@ -234,7 +247,7 @@
           'configuration_title' => 'Sort order',
           'configuration_key' => 'MODULE_SHOPPING_CART_PRODUCTS_LISTING_SORT_ORDER',
           'configuration_value' => '10',
-          'configuration_description' => 'Sort order of display. Lowest is displayed first',
+          'configuration_description' => 'Sort order of display. Lowest is displayed first. The sort order must be different on every module',
           'configuration_group_id' => '6',
           'sort_order' => '4',
           'set_function' => '',

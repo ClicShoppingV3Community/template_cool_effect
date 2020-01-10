@@ -46,7 +46,7 @@
                     'modules_shopping_cart/modules_shopping_cart_general.css',
                     'modules_products_search/modules_products_search_general.css',
                     'general/bootstrap_customize.css',
-                    'general/CoolEffect.css'
+                    'general/cooleffect.css'
                    ];
 
     $ignore_regex = '/^_/';
@@ -110,7 +110,7 @@
                'modules_shopping_cart/modules_shopping_cart_general.css',
                'modules_products_search/modules_products_search_general.css',
                'general/bootstrap_customize.css',
-               'general/CoolEffect',
+               'general/cooleffect.css',
               ];
 
 /**

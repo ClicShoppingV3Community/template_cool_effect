@@ -13,7 +13,7 @@ use ClicShopping\OM\HTML;
 ?>
 <div class="col-md-<?php echo $bootstrap_column; ?> col-md-<?php echo $bootstrap_column; ?>">
   <div class="separator"></div>
-  <div class="card-deck-wrapper" itemprop="itemListElement" itemscope="" itemtype="https://schema.org/Product">
+  <div class="card-deck-wrapper">
     <div class="card-deck">
       <div class="card">
         <div class="hovereffect">
@@ -33,7 +33,7 @@ use ClicShopping\OM\HTML;
   <div class="row">
     <div class="col-md-4">
      <?php
-        //echo $total_reviews;
+        //echo $avg_reviews;
         echo HTML::stars('4');
     ?>
     </div>
@@ -45,3 +45,4 @@ use ClicShopping\OM\HTML;
     </div>
   </div>
 </div>
+<?php echo $jsonLtd; ?>

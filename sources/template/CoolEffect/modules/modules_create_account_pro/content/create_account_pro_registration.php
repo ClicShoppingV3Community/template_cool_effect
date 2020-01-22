@@ -21,12 +21,10 @@
   <div class="separator"></div>
   <div class="contentText">
 <?php
-  if ( $CLICSHOPPING_MessageStack->exists('create_account_pro') ) {
-?>
-    <div class="alert-warning" role="alert"><?php echo $CLICSHOPPING_MessageStack->get('create_account_pro'); ?></div>
-    <div class="separator"></div>
-<?php
+  if ( $CLICSHOPPING_MessageStack->exists('main') ) {
+    echo $CLICSHOPPING_MessageStack->get('main');
   }
+
 // ----------------------
 // ------ Address   -----
 // ----------------------

@@ -300,10 +300,10 @@
       $CLICSHOPPING_Db = Registry::get('Db');
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Souhaitez-vous activer ce module ?',
+          'configuration_title' => 'Do you want to enable this module ?',
           'configuration_key' => 'MODULE_FRONT_PAGE_PRODUCTS_FAVORITES_STATUS',
           'configuration_value' => 'True',
-          'configuration_description' => 'Souhaitez vous activer ce module à votre boutique ?',
+          'configuration_description' => 'Do you want to enable this module in your shop ?',
           'configuration_group_id' => '6',
           'sort_order' => '1',
           'set_function' => 'clic_cfg_set_boolean_value(array(\'True\', \'False\'))',
@@ -312,10 +312,10 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Quel type de template souhaitez-vous voir affiché ?',
+          'configuration_title' => 'What type of template would you like to see displayed?',
           'configuration_key' => 'MODULE_FRONT_PAGE_PRODUCTS_FAVORITES_TEMPLATE',
           'configuration_value' => 'template_bootstrap_column_5.php',
-          'configuration_description' => 'Veuillez indiquer le type de template que vous souhaitez voir affiché.<br /><br /><b>Note</b><br /> - Si vous avez opté pour une configuration en ligne, veuillez choisir un type de nom de template comme <u>template_line</u>.<br /><br /> - Si vous avez opté pour un affichage en colonne, veuillez choisir un type de nom de template comme <u>template_column</u> puis veuillez configurer le nombre de colonnes.<br />',
+          'configuration_description' => 'Please indicate the type of template you would like displayed. <br /> <br /> <b> Note </b> <br /> - If you have opted for an online configuration, please choose a type of name. template like <u> template_line </u>. <br /> <br /> - If you opted for a column display, please choose a type of template name like <u> template_column </u> and then configure the number of columns. <br />',
           'configuration_group_id' => '6',
           'sort_order' => '2',
           'set_function' => 'clic_cfg_set_multi_template_pull_down',
@@ -336,7 +336,7 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Indiquer le nombre de nouveaux produits à afficher sur la page d\'accueil',
+          'configuration_title' => 'Indicate the number of new products to display on the home page',
           'configuration_key' => 'MODULE_FRONT_PAGE_PRODUCTS_FAVORITES_MAX_DISPLAY',
           'configuration_value' => '6',
           'configuration_description' => 'Veuillez indiquer le nombre maximum de nouveaux produits à afficher.',
@@ -384,10 +384,10 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Souhaitez-vous afficher un message Nouveauté / Promotion /  Sélection / Coups de coeur?',
+          'configuration_title' => 'Do you want to display a message New / Special / Featured / Favorites?',
           'configuration_key' => 'MODULE_FRONT_PAGE_PRODUCTS_FAVORITES_TICKER',
           'configuration_value' => 'False',
-          'configuration_description' => 'Afficher un message Nouveauté / Promotion / Sélection / Coups de coeur en surimpression sur l\'image du produit ?<br /><br />la durée est paramétrable dans le Menu configuration / ma boutique / Valeurs minimales / maximales<br><br><i>(Valeur true = Oui - Valeur false = Non)</i>',
+          'configuration_description' => 'Display a message New / Promotion / Selection / Favorites superimposed on the image of the product? <br /> <br /> the duration is configurable in the Configuration menu / my shop / Minimum / maximum values <br /> < br /> <i> (Value true = Yes - Value false = No) </i>',
           'configuration_group_id' => '6',
           'sort_order' => '9',
           'set_function' => 'clic_cfg_set_boolean_value(array(\'True\', \'False\'))',
@@ -444,10 +444,10 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Ordre de tri d\'affichage',
+          'configuration_title' => 'Sort order',
           'configuration_key' => 'MODULE_FRONT_PAGE_PRODUCTS_FAVORITES_SORT_ORDER',
           'configuration_value' => '120',
-          'configuration_description' => 'Ordre de tri pour l\'affichage (Le plus petit nombre est montré en premier)',
+          'configuration_description' => 'Sort order of display. Lowest is displayed first. The sort order must be different on every module',
           'configuration_group_id' => '6',
           'sort_order' => '12',
           'set_function' => '',

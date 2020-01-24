@@ -44,7 +44,7 @@
 // nbr of column to display  boostrap
         $bootstrap_column = (int)MODULE_FRONT_PAGE_MANUFACTURERS_COLUMNS;
 
-        if (!isset($_GET['manufacturers_id'])) {
+        if (!isset($_GET['manufacturersId'])) {
 
           $Qmanufacturer = $CLICSHOPPING_Db->prepare('select manufacturers_id,
                                                              manufacturers_image,
@@ -76,7 +76,7 @@
                                                        limit :limit
                                                       ');
           $Qmanufacturer->bindInt(':limit', MODULE_FRONT_PAGE_MANUFACTURERS_LIMIT);
-          $Qmanufacturer->bindInt(':manufacturers_id', $_GET['manufacturers_id']);
+          $Qmanufacturer->bindInt(':manufacturers_id', $_GET['manufacturersId']);
 
           $Qmanufacturer->execute();
         }
@@ -119,10 +119,10 @@
 
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Souhaitez-vous activer ce module ?',
+          'configuration_title' => 'Do you want to enable this module ?',
           'configuration_key' => 'MODULE_FRONT_PAGE_MANUFACTURERS_STATUS',
           'configuration_value' => 'True',
-          'configuration_description' => 'Souhaitez vous activer ce module à votre boutique ?',
+          'configuration_description' => 'Do you want to enable this module in your shop ?',
           'configuration_group_id' => '6',
           'sort_order' => '1',
           'set_function' => 'clic_cfg_set_boolean_value(array(\'True\', \'False\'))',
@@ -205,10 +205,10 @@
 
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Ordre de tri d\'affichage',
+          'configuration_title' => 'Sort order',
           'configuration_key' => 'MODULE_FRONT_PAGE_MANUFACTURERS_SORT_ORDER',
           'configuration_value' => '100',
-          'configuration_description' => 'Ordre de tri pour l\'affichage (Le plus petit nombre est montré en premier)',
+          'configuration_description' => 'Sort order of display. Lowest is displayed first. The sort order must be different on every module',
           'configuration_group_id' => '6',
           'sort_order' => '7',
           'set_function' => '',

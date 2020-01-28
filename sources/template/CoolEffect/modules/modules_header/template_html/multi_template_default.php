@@ -58,7 +58,7 @@ if (!$CLICSHOPPING_Customer->isLoggedOn()) {
                   <div class="separator"></div>
                   <div>
                     <span class="headerMultiTemplateDefaultPassword col-md-6"><?php echo HTML::link(CLICSHOPPING::link(null, 'Account&PasswordForgotten'), CLICSHOPPING::getDef('modules_header_multi_template_password_forgotten')); ?>
-                    <span class="text-md-right col-md-6"><?php echo $login; ?></span>
+                    <span class="text-md-right col-md-6"><label for="' . CLICSHOPPING::getDef('modules_header_multi_template_account_login') . '"><?php echo $login; ?></label></span>
                   </div>
                   <?php echo $endform; ?>
                 </div>
@@ -94,7 +94,7 @@ if (!$CLICSHOPPING_Customer->isLoggedOn()) {
               <div class="input-group col-md-12 advancedSearchCriteria">
                 <label for="inputKeywordsSearchLogin" class="sr-only"><?php echo CLICSHOPPING::getDef('modules_header_multi_template_header_search'); ?></label>
                 <?php echo HTML::inputField('keywords', null, 'required aria-required="true" id="inputKeywordsSearchLogin" placeholder="' . CLICSHOPPING::getDef('modules_header_multi_template_header_search') . '"', 'search'); ?>
-                <span id="buttonKeywordsSearch"><?php echo HTML::button(null, 'fas fa-search', null, 'primary', null, 'md'); ?></span>
+                <span id="buttonKeywordsSearch"><label for="buttonKeywordsSearch"><?php echo HTML::button(null, 'fas fa-search', null, 'primary', null, 'md'); ?></label></span>
               </div>
                <div class="text-md-center advancedSearchLink"><?php echo HTML::link(CLICSHOPPING::link(null, 'Search&AdvancedSearch'), CLICSHOPPING::getDef('modules_header_multi_template_title_advanced_search')); ?></div>
               <?php echo HTML::hiddenField('search_in_description', '1'); ?>

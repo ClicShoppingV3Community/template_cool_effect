@@ -9,20 +9,20 @@
  */
 
 
-div.sitemapCategoryTreeTittlecategories {
+div.sitemapCategoryTreeTittleCategories {
     padding-left: 35px;
     color: #000;
 }
 
 
-div.SitemapCategoryTreeBlockcategories {
+div.SitemapCategoryTreeBlockCategories {
     float: left;
     width: 80%;
     padding-left: 75px;
     text-decoration: none !important;
 }
 
-div.SitemapCategoryTreecategories A {
+div.SitemapCategoryTreeCategories A {
     list-style: none;
     list-style-type: none;
     padding-left: 0.3125rem;
@@ -37,12 +37,12 @@ div.SitemapCategoryTreecategories A {
 }
 */
 
-div.SitemapCategoryTreecategories {
+div.SitemapCategoryTreeCategories {
     color: #EDAC27;
 }
 
 
-div.SitemapCategoryTreecategories ul {
+div.SitemapCategoryTreeCategories ul {
     float: left;
     list-style: none;
     list-style-type: none;
@@ -50,18 +50,18 @@ div.SitemapCategoryTreecategories ul {
     border-left: 1px dotted gray;
 }
 
-div.SitemapCategoryTreecategories li {
+div.SitemapCategoryTreeCategories li {
     list-style: none;
     list-style-type: none;
     width: 100%;
 }
 
-ul.List-group-SitemapTreecategories {
+ul.list-group-SitemapTreeCategories {
     margin-bottom: 5px;
     padding-left: 30px;
 }
 
-li.List-group-itemSitemapTreecategories {
+li.list-group-itemSitemapTreeCategories {
     border: none;
     padding-top: 0.625rem;
     padding-right: 1px;

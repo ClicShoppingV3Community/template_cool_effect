@@ -168,10 +168,10 @@
       );
 
       $CLICSHOPPING_Db->save('configuration', [
-          'configuration_title' => 'Veuillez indiquer le nombre de colonnes que vous souhaitez voir affiché  ?',
+          'configuration_title' => 'Please indicate the number of column that you want to display ?',
           'configuration_key' => 'MODULE_FRONT_PAGE_MANUFACTURERS_COLUMNS',
           'configuration_value' => '6',
-          'configuration_description' => 'Veuillez indiquer le nombre de colonnesà afficher par ligne.<br /><br />Note:<br /><br />- Entre 1 et 12',
+          'configuration_description' => 'Choose a number between 1 and 12',
           'configuration_group_id' => '6',
           'sort_order' => '6',
           'set_function' => 'clic_cfg_set_content_module_width_pull_down',

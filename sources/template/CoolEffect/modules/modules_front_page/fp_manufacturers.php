@@ -227,7 +227,7 @@
     }
 
     public function keys() {
-      return array ('MODULE_FRONT_PAGE_MANUFACTURERS_STATUS',
+      return array('MODULE_FRONT_PAGE_MANUFACTURERS_STATUS',
                     'MODULE_FRONT_PAGE_MANUFACTURERS_DISPLAY_TITLE',
                     'MODULE_FRONT_PAGE_MANUFACTURERS_LIMIT',
                     'MODULE_FRONT_PAGE_MANUFACTURERS_DISPLAY',

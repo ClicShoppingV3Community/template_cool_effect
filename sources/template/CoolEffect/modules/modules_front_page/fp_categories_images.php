@@ -207,7 +207,7 @@
     }
 
     public function keys() {
-      return array ('MODULE_FRONT_PAGE_CATEGORIES_IMAGES_STATUS',
+      return array('MODULE_FRONT_PAGE_CATEGORIES_IMAGES_STATUS',
                     'MODULE_FRONT_PAGE_CATEGORIES_IMAGES_DISPLAY_TITLE',
                     'MODULE_FRONT_PAGE_CATEGORIES_IMAGES_DISPLAY',
                     'MODULE_FRONT_PAGE_CATEGORIES_IMAGES_COLUMNS',

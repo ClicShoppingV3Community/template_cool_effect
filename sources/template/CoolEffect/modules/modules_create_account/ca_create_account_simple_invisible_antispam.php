@@ -28,7 +28,7 @@
       $this->title = CLICSHOPPING::getDef('modules_create_account_simple_invisible_antispam_title');
       $this->description = CLICSHOPPING::getDef('modules_create_account_simple_invisible_antispam_description');
 
-      if ( defined('MODULES_CREATE_ACCOUNT_SIMPLE_INVISIBLE_ANTISPAM_STATUS') ) {
+      if (defined('MODULES_CREATE_ACCOUNT_SIMPLE_INVISIBLE_ANTISPAM_STATUS')) {
         $this->sort_order = (int)MODULES_CREATE_ACCOUNT_SIMPLE_INVISIBLE_ANTISPAM_SORT_ORDER;
         $this->enabled = (MODULES_CREATE_ACCOUNT_SIMPLE_INVISIBLE_ANTISPAM_STATUS == 'True');
       }

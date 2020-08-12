@@ -87,7 +87,7 @@
           $manufacturers_content .= '<div class="separator"></div>';
           $manufacturers_content .= '<div class="d-flex flex-wrap  text-md-center">';
 
-          while ($Qmanufacturer->fetch() ) {
+          while ($Qmanufacturer->fetch()) {
             $manufacturer_url = $CLICSHOPPING_Manufacturers->getManufacturerUrlRewrited()->getManufacturerUrl($Qmanufacturer->valueInt('manufacturers_id'));
 
             $image = HTML::link($manufacturer_url, HTML::image($CLICSHOPPING_Template->getDirectoryTemplateImages() .  $Qmanufacturer->value('manufacturers_image'), HTML::outputProtected($Qmanufacturer->value('manufacturers_name')), MODULE_FRONT_PAGE_MANUFACTURERS_WIDTH, MODULE_FRONT_PAGE_MANUFACTURERS_HEIGHT, null, true));

@@ -61,7 +61,7 @@
 
         $Qcategories->execute();
 
-        while ($Qcategories->fetch() ) {
+        while ($Qcategories->fetch()) {
           $categories_id = $Qcategories->valueInt('categories_id');
           $categories_data[$categories_id] = ['id' => $categories_id,
                                               'name' => $Qcategories->value('categories_name'),

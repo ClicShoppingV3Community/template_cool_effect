@@ -28,7 +28,7 @@
       $this->title = CLICSHOPPING::getDef('modules_create_account_pro_simple_invisible_antispam_title');
       $this->description = CLICSHOPPING::getDef('modules_create_account_pro_simple_invisible_antispam_description');
 
-      if ( defined('MODULES_CREATE_ACCOUNT_PRO_SIMPLE_INVISIBLE_ANTISPAM_STATUS') ) {
+      if (defined('MODULES_CREATE_ACCOUNT_PRO_SIMPLE_INVISIBLE_ANTISPAM_STATUS')) {
         $this->sort_order = (int)MODULES_CREATE_ACCOUNT_PRO_SIMPLE_INVISIBLE_ANTISPAM_SORT_ORDER;
         $this->enabled = (MODULES_CREATE_ACCOUNT_PRO_SIMPLE_INVISIBLE_ANTISPAM_STATUS == 'True');
       }
@@ -41,7 +41,7 @@
     public function execute() {
       $CLICSHOPPING_Template = Registry::get('Template');
 
-      if (isset($_GET['Account'] ) && isset($_GET['CreatePro']) && !isset($_GET['Success']) ) {
+      if (isset($_GET['Account']) && isset($_GET['CreatePro']) && !isset($_GET['Success'])) {
         $create_account_pro_invisible_antispam = '<!--  create_account_pro_invisible_invisible_antispam start -->' . "\n";
         $create_account_pro_invisible_antispam .= HTML::inputField('invisible_recaptcha', '', 'id="hiddenRecaptcha"', null, null, 'hiddenRecaptcha');
         $create_account_pro_invisible_antispam .= HTML::inputField('invisible_clicshopping', '', 'id="hiddenRecaptcha"', null, null, 'hiddenRecaptcha');

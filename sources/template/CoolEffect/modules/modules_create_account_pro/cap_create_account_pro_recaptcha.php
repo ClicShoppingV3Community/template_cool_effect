@@ -28,7 +28,7 @@
       $this->title = CLICSHOPPING::getDef('modules_create_account_pro_recaptcha_title');
       $this->description = CLICSHOPPING::getDef('modules_create_account_pro_recaptcha_description');
 
-      if ( defined('MODULES_CREATE_ACCOUNT_PRO_RECAPTCHA_STATUS') ) {
+      if (defined('MODULES_CREATE_ACCOUNT_PRO_RECAPTCHA_STATUS')) {
         $this->sort_order = (int)MODULES_CREATE_ACCOUNT_PRO_RECAPTCHA_SORT_ORDER;
         $this->enabled = (MODULES_CREATE_ACCOUNT_PRO_RECAPTCHA_STATUS == 'True');
       }
@@ -42,7 +42,7 @@
       $CLICSHOPPING_Template = Registry::get('Template');
       $CLICSHOPPING_Hooks = Registry::get('Hooks');
 
-      if (isset($_GET['Account'] ) && isset($_GET['CreatePro']) && !isset($_GET['Success']) ) {
+      if (isset($_GET['Account']) && isset($_GET['CreatePro']) && !isset($_GET['Success'])) {
        $content_width = (int)MODULES_CREATE_ACCOUNT_PRO_RECAPTCHA_CONTENT_WIDTH;
 
         $create_account_pro_recaptcha = '<!--  create_account_pro_recaptcha start -->' . "\n";

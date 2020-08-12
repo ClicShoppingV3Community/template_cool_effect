@@ -28,7 +28,7 @@
       $this->title = CLICSHOPPING::getDef('modules_create_account_recaptcha_title');
       $this->description = CLICSHOPPING::getDef('modules_create_account_recaptcha_description');
 
-      if ( defined('MODULES_CREATE_ACCOUNT_RECAPTCHA_STATUS') ) {
+      if (defined('MODULES_CREATE_ACCOUNT_RECAPTCHA_STATUS')) {
         $this->sort_order = (int)MODULES_CREATE_ACCOUNT_RECAPTCHA_SORT_ORDER;
         $this->enabled = (MODULES_CREATE_ACCOUNT_RECAPTCHA_STATUS == 'True');
       }

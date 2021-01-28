@@ -39,7 +39,7 @@ use ClicShopping\OM\HTML;
     </div>
     <div class="col-md-8">
       <span><?php echo $product_price; ?> </span>
-      <span class="float-md-right text-md-right">
+      <span class="float-end text-md-right">
         <?php echo $form . $input_quantity . '  ' . $buy_button . $endform . ' ' .  $button_small_view_details; ?>
       </span>
     </div>

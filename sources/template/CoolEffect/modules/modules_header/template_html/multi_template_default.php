@@ -43,14 +43,14 @@ if (!$CLICSHOPPING_Customer->isLoggedOn()) {
                   <div class="separator"></div>
                   <div class="row">
                     <div class="col-md-12">
-                      <label for="inputAddressEmailLogin" class="sr-only"><?php echo CLICSHOPPING::getDef('modules_header_multi_template_header_email_address'); ?></label>
+                      <label for="inputAddressEmailLogin" class="visually-hidden"><?php echo CLICSHOPPING::getDef('modules_header_multi_template_header_email_address'); ?></label>
                       <span class="col-md-3 float-start text-md-left headerMultiTemplateDefaultLoginText"  id="inputAddressEmailLogin"><?php echo CLICSHOPPING::getDef('modules_header_multi_template_header_email_address'); ?></span>
                       <span class="col-md-9 float-end"><?php echo HTML::inputField('email_address', null, 'id="inputAddressEmail" autocomplete="username" aria-describedby="' . CLICSHOPPING::getDef('modules_header_multi_template_header_email_address') . '" placeholder="' . CLICSHOPPING::getDef('modules_header_multi_template_header_email_address') . '"', 'email'); ?></span>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12">
-                      <label for="inputAddressPasswordLogin" class="sr-only"><?php echo CLICSHOPPING::getDef('modules_header_multi_template_account_password'); ?></label>
+                      <label for="inputAddressPasswordLogin" class="visually-hidden"><?php echo CLICSHOPPING::getDef('modules_header_multi_template_account_password'); ?></label>
                       <span class="col-md-3 float-start text-md-left headerMultiTemplateDefaultPasswordText" id="inputAddressPasswordLogin"><?php echo CLICSHOPPING::getDef('modules_header_multi_template_account_password'); ?></span>
                       <span class="col-md-9 float-end"><?php echo HTML::inputField('password', null, 'id="current-password" autocomplete="current-password" aria-describedby="' . CLICSHOPPING::getDef('modules_header_multi_template_account_password') . '" placeholder="' . CLICSHOPPING::getDef('modules_header_multi_template_account_password') . '"', 'password'); ?></span>
                     </div>
@@ -92,7 +92,7 @@ if (!$CLICSHOPPING_Customer->isLoggedOn()) {
           <span class="col-md-6 col-sm-12 text-md-center">
               <?php echo $form_advanced_result; ?>
               <div class="input-group col-md-12 advancedSearchCriteria">
-                <label for="inputKeywordsSearchLogin" class="sr-only"><?php echo CLICSHOPPING::getDef('modules_header_multi_template_header_search'); ?></label>
+                <label for="inputKeywordsSearchLogin" class="visually-hidden"><?php echo CLICSHOPPING::getDef('modules_header_multi_template_header_search'); ?></label>
                 <?php echo HTML::inputField('keywords', null, 'required aria-required="true" id="inputKeywordsSearchLogin" placeholder="' . CLICSHOPPING::getDef('modules_header_multi_template_header_search') . '"', 'search'); ?>
                 <span id="buttonKeywordsSearch"><label for="buttonKeywordsSearch"><?php echo HTML::button(null, 'fas fa-search', null, 'primary', null, 'md'); ?></label></span>
               </div>

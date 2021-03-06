@@ -14,8 +14,8 @@
   use ClicShopping\OM\Mail;
 
   class ca_create_account_recaptcha {
-    public $code;
-    public $group;
+    public string $code;
+    public string $group;
     public string $title;
     public string $description;
     public ?int $sort_order = 0;
@@ -28,12 +28,12 @@
       $this->title = CLICSHOPPING::getDef('modules_create_account_recaptcha_title');
       $this->description = CLICSHOPPING::getDef('modules_create_account_recaptcha_description');
 
-      if (defined('MODULES_CREATE_ACCOUNT_RECAPTCHA_STATUS')) {
+      if (\defined('MODULES_CREATE_ACCOUNT_RECAPTCHA_STATUS')) {
         $this->sort_order = (int)MODULES_CREATE_ACCOUNT_RECAPTCHA_SORT_ORDER;
         $this->enabled = (MODULES_CREATE_ACCOUNT_RECAPTCHA_STATUS == 'True');
       }
 
-      if (!defined('CLICSHOPPING_APP_ANTISPAM_RE_RECAPTCHA_STATUS') || CLICSHOPPING_APP_ANTISPAM_RE_RECAPTCHA_STATUS == 'False' || !defined('CLICSHOPPING_APP_ANTISPAM_CREATE_ACCOUNT') || CLICSHOPPING_APP_ANTISPAM_CREATE_ACCOUNT == 'False') {
+      if (!\defined('CLICSHOPPING_APP_ANTISPAM_RE_RECAPTCHA_STATUS') || CLICSHOPPING_APP_ANTISPAM_RE_RECAPTCHA_STATUS == 'False' || !\defined('CLICSHOPPING_APP_ANTISPAM_CREATE_ACCOUNT') || CLICSHOPPING_APP_ANTISPAM_CREATE_ACCOUNT == 'False') {
          $this->enabled = false;
       }
 
@@ -67,7 +67,7 @@
     }
 
     public function check() {
-      return defined('MODULES_CREATE_ACCOUNT_RECAPTCHA_STATUS');
+      return \defined('MODULES_CREATE_ACCOUNT_RECAPTCHA_STATUS');
     }
 
     public function install() {

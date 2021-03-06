@@ -14,8 +14,8 @@
   use ClicShopping\OM\CLICSHOPPING;
 
   class fp_categories_images {
-    public $code;
-    public $group;
+    public string $code;
+    public string $group;
     public string $title;
     public string $description;
     public ?int $sort_order = 0;
@@ -28,7 +28,7 @@
       $this->title = CLICSHOPPING::getDef('module_front_page_categories_images_title');
       $this->description = CLICSHOPPING::getDef('module_front_page_categories_images_description');
 
-      if (defined('MODULE_FRONT_PAGE_CATEGORIES_IMAGES_STATUS')) {
+      if (\defined('MODULE_FRONT_PAGE_CATEGORIES_IMAGES_STATUS')) {
         $this->sort_order = MODULE_FRONT_PAGE_CATEGORIES_IMAGES_SORT_ORDER;
         $this->enabled = (MODULE_FRONT_PAGE_CATEGORIES_IMAGES_STATUS == 'True');
       }
@@ -71,7 +71,7 @@
 
 
 // show only if we have categories in the array
-        if (count($categories_data) > 0 && !is_null($categories_data)) {
+        if (count($categories_data) > 0 && !\is_null($categories_data)) {
 // show the categories in a fixed grid (# of columns is set in admin)
           $categories_content = '<!-- categories frontpage images start -->' . "\n";
           $categories_content .= '<div class="clearfix"></div>';
@@ -109,7 +109,7 @@
     }
 
     public function check() {
-      return defined('MODULE_FRONT_PAGE_CATEGORIES_IMAGES_STATUS');
+      return \defined('MODULE_FRONT_PAGE_CATEGORIES_IMAGES_STATUS');
     }
 
     public function install() {

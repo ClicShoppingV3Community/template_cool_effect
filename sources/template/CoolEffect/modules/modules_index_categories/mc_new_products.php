@@ -201,7 +201,7 @@
               $submit_button_view = $CLICSHOPPING_ProductsFunctionTemplate->getButtonView($products_id);
 // button buy
 //              $buy_button = HTML::button(CLICSHOPPING::getDef('button_buy_now'), null, null, 'primary', null, 'sm');
-              $buy_button = HTML::button(null, 'fa fa-shopping-cart fa-2x', null, 'link', null, 'sm');
+              $buy_button = HTML::button(null, 'bi bi-cart-fill', null, 'link', null, 'sm');
 
               $CLICSHOPPING_ProductsCommon->getBuyButton($buy_button);
 // Display an input allowing for the customer to insert a quantity
@@ -245,7 +245,7 @@
               }
 
 // **************************
-// Display an information if the stock is sold_out for all groups
+// Display an information if the stock is sold out for all groups
 // **************************
               if (!empty($CLICSHOPPING_ProductsCommon->getProductsSoldOut($products_id))) {
                 $submit_button = $CLICSHOPPING_ProductsCommon->getProductsSoldOut($products_id);

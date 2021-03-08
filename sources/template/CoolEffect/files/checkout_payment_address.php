@@ -83,7 +83,7 @@
               <div class="separator"></div>
               <?php echo $CLICSHOPPING_Address->addressFormat($format_id, $addresses, true, ' ', '<br />'); ?>
             </div>
-            <div class="card-footer text-md-center">
+            <div class="card-footer text-center">
               <div class="custom-control custom-radio custom-control-inline">
                 <?php echo HTML::radioField('address', $Qaddresses->valueInt('address_book_id'), ($Qaddresses->valueInt('address_book_id') == $_SESSION['billto']), 'class="custom-control-input" id="address_book_id' . $radio_buttons .'" name="address_book_id' . $radio_buttons .'"'); ?>
                 <label class="custom-control-label" for="address_book_id<?php echo $radio_buttons; ?>"</label>
@@ -134,7 +134,7 @@
 ?>
     <div class="separator"></div>
     <div class="control-group">
-     <div class="controls">
+     <div>
        <div class="buttonSet">
          <span class="float-end"><label for="buttonContinue"><?php echo HTML::button(CLICSHOPPING::getDef('button_continue'), null, null, 'success'); ?></label></span>
        </div>
@@ -144,7 +144,7 @@
   if ($process === true) {
 ?>
     <div class="control-group">
-      <div class="controls">
+      <div>
         <div class="buttonSet">
           <span class="float-start"><label for="buttonBack"><?php echo  HTML::button(CLICSHOPPING::getDef('button_back'), '', CLICSHOPPING::link('checkout_payment_address.php'),'info'); ?></label></span>
         </div>

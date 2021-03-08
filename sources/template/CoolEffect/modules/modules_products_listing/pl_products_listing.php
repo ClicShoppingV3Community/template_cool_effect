@@ -65,12 +65,13 @@
         $new_prods_content .= '<div style="padding-right:2em; padding-top:0.5rem;">';
         $new_prods_content .= '<div class="dropdown">';
         $new_prods_content .= '<div class="btn-group btn-group-sm float-end">';
-        $new_prods_content .= '<button type="button" class="btn btn-secondary dropdown-toggle"  data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" aria-expanded="false">';
+        $new_prods_content .= '<button type="button" class="btn btn-secondary dropdown-toggle"  data-bs-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" aria-expanded="false">';
         $new_prods_content .= CLICSHOPPING::getDef('text_sort_by');
         $new_prods_content .= '</button>';
-        $new_prods_content .= '<ul class="dropdown-menu text-md-left"  aria-labelledby="dropdownMenu2">';
+        $new_prods_content .= '<ul class="dropdown-menu text-start"  aria-labelledby="dropdownMenu2">';
 
         $column_list = $ProductsListing->getColumnList();
+        $lc_text = CLICSHOPPING::getDef('table_heading_date');
 
 // number of sort criterias
             for ($col = 0, $n = \count($column_list); $col < $n; $col++) {
@@ -138,8 +139,6 @@
                 $products_id = $Qlisting->valueInt('products_id');
                 $_POST['products_id'] = $products_id;
 
-                $products_image = $Qlisting->value('products_image');
-
                 $products_name_url = $CLICSHOPPING_ProductsFunctionTemplate->getProductsUrlRewrited()->getProductNameUrl($products_id);
 
 //Manufacturer name
@@ -204,7 +203,7 @@
                 }
 
 // **************************
-// Display an information if the stock is sold_out for all groups
+// Display an information if the stock is sold out for all groups
 // **************************
                 if (!empty($CLICSHOPPING_ProductsCommon->getProductsSoldOut($products_id))) {
                   $submit_button = $CLICSHOPPING_ProductsCommon->getProductsSoldOut($products_id);
@@ -286,7 +285,7 @@
             $new_prods_content .= '</div>';  // flex
           } else {
             $new_prods_content .= '<div class="separator"></div>';
-            $new_prods_content .= '<div class="text-md-center alert alert-info">' . CLICSHOPPING::getDef('text_no_products') . '</div>';
+            $new_prods_content .= '<div class="text-center alert alert-info">' . CLICSHOPPING::getDef('text_no_products') . '</div>';
           }
 
           if (($listingTotalRow > 0) && ((PREV_NEXT_BAR_LOCATION == '2') || (PREV_NEXT_BAR_LOCATION == '3'))) {
@@ -299,7 +298,7 @@
               $new_prods_content .= '</div>';
               $new_prods_content .= '<div class="col-md-6 float-end">';
               $new_prods_content .= '<span class="float-end pagenav">'.  $Qlisting->getPageSetLinks(CLICSHOPPING::getAllGET(array('page', 'info', 'x', 'y')), 'Shop') . '</span>';
-              $new_prods_content .= '<span class="text-md-right">' . CLICSHOPPING::getDef('text_result_page') . '</span>';
+              $new_prods_content .= '<span class="text-end">' . CLICSHOPPING::getDef('text_result_page') . '</span>';
               $new_prods_content .= '</div>';
               $new_prods_content .= '</div>';
               $new_prods_content .= '<div class="clearfix"></div>';

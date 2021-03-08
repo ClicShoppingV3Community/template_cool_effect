@@ -13,10 +13,10 @@ use ClicShopping\OM\HTML;
 ?>
 <div class="col-md-<?php echo $bootstrap_column; ?> col-md-<?php echo $bootstrap_column; ?>">
   <div class="separator"></div>
-  <div class="card-deck-wrapper">
-    <div class="card-deck">
-      <div class="card">
-        <div class="hovereffect">
+  <div class="card-wrapper">
+    <div class="card"
+>
+<div class="card"><div class="hovereffect">
           <div class="card-block">
             <div class="separator"></div>
             <div class="card-img-top ModulesFrontPageBoostrapColumn5Image">
@@ -39,7 +39,7 @@ use ClicShopping\OM\HTML;
     </div>
     <div class="col-md-8">
       <span><?php echo $product_price; ?> </span>
-      <span class="float-end text-md-right">
+      <span class="float-end text-end">
         <?php echo $form . $input_quantity . '  ' . $buy_button . $endform . ' ' .  $button_small_view_details; ?>
       </span>
     </div>

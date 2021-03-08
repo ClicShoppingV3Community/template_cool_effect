@@ -28,12 +28,12 @@
     <div class="contentText">
       <div class="separator"></div>
       <div class="separator"></div>
-      <div class="alert alert-warning text-md-center" role="alert">
+      <div class="alert alert-warning text-center" role="alert">
          <h3><?php echo CLICSHOPPING::getDef('text_product_not_found'); ?></h3>
       </div>
       <div class="separator"></div>
       <div class="control-group">
-        <div class="controls">
+        <div>
           <div class="buttonSet">
             <span class="float-end"><label for="buttonContinue"><?php echo HTML::button(CLICSHOPPING::getDef('button_continue'), null, CLICSHOPPING::link(),'success'); ?></label></span>
           </div>

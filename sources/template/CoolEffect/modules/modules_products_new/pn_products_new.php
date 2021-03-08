@@ -70,10 +70,10 @@
             $new_prods_content .= '<div style="padding-right:2em; padding-top:0.5rem;">';
             $new_prods_content .= '<div class="dropdown">';
             $new_prods_content .= '<div class="btn-group btn-group-sm float-end">';
-            $new_prods_content .= '<button type="button" class="btn btn-secondary dropdown-toggle"  data-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" aria-expanded="false">';
+            $new_prods_content .= '<button type="button" class="btn btn-secondary dropdown-toggle"  data-bs-toggle="dropdown" id="dropdownMenu2" aria-haspopup="true" aria-expanded="false">';
             $new_prods_content .= CLICSHOPPING::getDef('text_sort_by');
             $new_prods_content .= '</button>';
-            $new_prods_content .= '<ul class="dropdown-menu text-md-left" aria-labelledby="dropdownMenu2">';
+            $new_prods_content .= '<ul class="dropdown-menu text-start" aria-labelledby="dropdownMenu2">';
 
 // number of sort criterias
             $column_list = ProductsNewClass::getCountColumnList();
@@ -111,8 +111,8 @@
               $link = CLICSHOPPING::link(CLICSHOPPING::getIndex(), CLICSHOPPING::getAllGET(array('page', 'info', 'sort')));
               $new_prods_content .= '<strong>' . CLICSHOPPING::getDef('text_view') . '</strong>';
               $new_prods_content .= '<div class="btn-group">';
-              $new_prods_content .= '<a href="' . $link . '" id="list" class="btn btn-default btn-sm"><span class="fa fa-th-list"></span>' . CLICSHOPPING::getDef('text_view_list') . '</a>';
-              $new_prods_content .= '<a href="' . $link . '" id="grid" class="btn btn-default btn-sm"><span class="fa fa-th"></span>' . CLICSHOPPING::getDef('text_view_grid') . '</a>';
+              $new_prods_content .= '<a href="' . $link . '" id="list" class="btn btn-default btn-sm"><span class="bi bi-card-list"></span>' . CLICSHOPPING::getDef('text_view_list') . '</a>';
+              $new_prods_content .= '<a href="' . $link . '" id="grid" class="btn btn-default btn-sm"><span class="bi bi-grid-3x2-gap-fill"></span>' . CLICSHOPPING::getDef('text_view_grid') . '</a>';
               $new_prods_content .= '</div>';
             }
 */
@@ -131,7 +131,7 @@
               $new_prods_content .= '</div>';
               $new_prods_content .= '<div class="col-md-6 float-end">';
               $new_prods_content .= '<div class="float-end pagenav">'.  $Qlisting->getPageSetLinks(CLICSHOPPING::getAllGET(array('page', 'info', 'x', 'y')), 'Shop') . '</div>';
-              $new_prods_content .= '<div class="text-md-right">' . CLICSHOPPING::getDef('text_result_page') . '</div>';
+              $new_prods_content .= '<div class="text-end">' . CLICSHOPPING::getDef('text_result_page') . '</div>';
               $new_prods_content .= '</div>';
               $new_prods_content .= '</div>';
               $new_prods_content .= '<div style="padding-top:10px;"></div>';
@@ -175,7 +175,7 @@
               $submit_button_view = $CLICSHOPPING_ProductsFunctionTemplate->getButtonView($products_id);
 // button buy
 //              $buy_button = HTML::button(CLICSHOPPING::getDef('button_buy_now'), null, null, 'primary', null, 'sm');
-              $buy_button = HTML::button(null, 'fa fa-shopping-cart fa-2x', null, 'link', null, 'sm');
+              $buy_button = HTML::button(null, 'bi bi-cart-fill', null, 'link', null, 'sm');
               $CLICSHOPPING_ProductsCommon->getBuyButton($buy_button);
 // Display an input allowing for the customer to insert a quantity
               $input_quantity = $CLICSHOPPING_ProductsFunctionTemplate->getDisplayInputQuantity(MODULE_PRODUCTS_NEW_DELETE_BUY_BUTTON, $products_id);
@@ -219,7 +219,7 @@
               }
 
 // **************************
-// Display an information if the stock is sold_out for all groups
+// Display an information if the stock is sold out for all groups
 // **************************
               if (!empty($CLICSHOPPING_ProductsCommon->getProductsSoldOut($products_id))) {
                 $submit_button = $CLICSHOPPING_ProductsCommon->getProductsSoldOut($products_id);
@@ -298,7 +298,7 @@
 
             $new_prods_content .= '</div>';  // flex
           } else {
-            $new_prods_content .= '<div class="text-md-center alert alert-info">' . CLICSHOPPING::getDef('text_no_products') . '</div>';
+            $new_prods_content .= '<div class="text-center alert alert-info">' . CLICSHOPPING::getDef('text_no_products') . '</div>';
           }
 
           if (($listingTotalRow > 0) && ((PREV_NEXT_BAR_LOCATION == '2') || (PREV_NEXT_BAR_LOCATION == '3'))) {
@@ -311,7 +311,7 @@
               $new_prods_content .= '</div>';
               $new_prods_content .= '<div class="col-md-6 float-end">';
               $new_prods_content .= '<span class="float-end pagenav">'.  $Qlisting->getPageSetLinks(CLICSHOPPING::getAllGET(array('page', 'info', 'x', 'y')), 'Shop') . '</span>';
-              $new_prods_content .= '<span class="text-md-right">' . CLICSHOPPING::getDef('text_result_page') . '</span>';
+              $new_prods_content .= '<span class="text-end">' . CLICSHOPPING::getDef('text_result_page') . '</span>';
               $new_prods_content .= '</div>';
               $new_prods_content .= '</div>';
               $new_prods_content .= '<div class="clearfix"></div>';
@@ -320,7 +320,7 @@
 
           $new_prods_content .= '</div>';
         } else {
-          $new_prods_content .= '<div class="text-md-center alert alert-info">' . CLICSHOPPING::getDef('text_no_products') . '</div>';
+          $new_prods_content .= '<div class="text-center alert alert-info">' . CLICSHOPPING::getDef('text_no_products') . '</div>';
         } // max display product
 
         $new_prods_content .= '</div>' . "\n";

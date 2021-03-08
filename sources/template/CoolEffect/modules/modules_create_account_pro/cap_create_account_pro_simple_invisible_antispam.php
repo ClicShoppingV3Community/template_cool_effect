@@ -43,7 +43,6 @@
 
       if (isset($_GET['Account']) && isset($_GET['CreatePro']) && !isset($_GET['Success'])) {
         $create_account_pro_invisible_antispam = '<!--  create_account_pro_invisible_invisible_antispam start -->' . "\n";
-        $create_account_pro_invisible_antispam .= HTML::inputField('invisible_recaptcha', '', 'id="hiddenRecaptcha"', null, null, 'hiddenRecaptcha');
         $create_account_pro_invisible_antispam .= HTML::inputField('invisible_clicshopping', '', 'id="hiddenRecaptcha"', null, null, 'hiddenRecaptcha');
         $create_account_pro_invisible_antispam .= '<!-- create_account_pro_invisible_invisible_antispam end -->' . "\n";
 

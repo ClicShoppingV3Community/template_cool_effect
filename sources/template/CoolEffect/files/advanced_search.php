@@ -29,7 +29,7 @@
       <?php echo $CLICSHOPPING_Template->getBlocks('modules_advanced_search'); ?>
       <div class="separator"></div>
         <div class="control-group">
-          <div class="controls">
+          <div>
             <div class="buttonSet">
               <span class="float-end"><label for="buttonSearch"><?php echo HTML::button(CLICSHOPPING::getDef('button_search'), null, null, 'success'); ?></label></span>
             </div>

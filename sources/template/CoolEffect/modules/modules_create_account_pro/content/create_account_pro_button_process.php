@@ -15,7 +15,7 @@ use ClicShopping\OM\HTML;
 <div class="col-md-<?php echo $content_width; ?>" id="RowContentButtonProcess1">
   <div class="separator"></div>
     <div class="control-group">
-    <div class="controls">
+    <div>
       <div class="buttonSet float-end"><?php echo HTML::button(CLICSHOPPING::getDef('button_continue'), null, null, 'success'); ?></div>
     </div>
   </div>

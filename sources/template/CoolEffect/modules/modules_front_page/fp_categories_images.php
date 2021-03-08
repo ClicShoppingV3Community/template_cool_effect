@@ -71,13 +71,13 @@
 
 
 // show only if we have categories in the array
-        if (count($categories_data) > 0 && !\is_null($categories_data)) {
+        if (\count($categories_data) > 0 && !\is_null($categories_data)) {
 // show the categories in a fixed grid (# of columns is set in admin)
           $categories_content = '<!-- categories frontpage images start -->' . "\n";
           $categories_content .= '<div class="clearfix"></div>';
           $categories_content .=  '<div class="separator"></div>';
 
-          $categories_content .= '<div class="d-flex flex-wrap text-sm-center" itemscope itemtype="https://schema.org/ItemList">';
+          $categories_content .= '<div class="d-flex flex-wrap text-center" itemscope itemtype="https://schema.org/ItemList">';
           $categories_content .= '<meta itemprop="itemListOrder" content="https://schema.org/ItemListUnordered" />';
           $categories_content .= '<meta itemprop="name" content="' . $Qcategories->value('categories_name')  . '" />';
 

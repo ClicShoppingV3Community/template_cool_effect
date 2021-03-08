@@ -85,7 +85,7 @@
           $manufacturers_content = '<!-- manufacturer front page start -->' . "\n";
           $manufacturers_content .= '<div class="clearfix"></div>';
           $manufacturers_content .= '<div class="separator"></div>';
-          $manufacturers_content .= '<div class="d-flex flex-wrap  text-md-center">';
+          $manufacturers_content .= '<div class="d-flex flex-wrap  text-center">';
 
           while ($Qmanufacturer->fetch()) {
             $manufacturer_url = $CLICSHOPPING_Manufacturers->getManufacturerUrlRewrited()->getManufacturerUrl($Qmanufacturer->valueInt('manufacturers_id'));

@@ -16,8 +16,8 @@
   class ca_create_account_registration {
     public string $code;
     public string $group;
-    public string $title;
-    public string $description;
+    public $title;
+    public $description;
     public ?int $sort_order = 0;
     public bool $enabled = false;
 
@@ -39,7 +39,7 @@
     $CLICSHOPPING_MessageStack = Registry::get('MessageStack');
     $CLICSHOPPING_Hooks = Registry::get('Hooks');
 
-    if (isset($_GET['Account']) && isset($_GET['Create']) && !isset($_GET['Success'])) {
+    if (isset($_GET['Account'], $_GET['Create']) && !isset($_GET['Success'])) {
       $content_width = (int)MODULE_CREATE_ACCOUNT_REGISTRATION_CONTENT_WIDTH;
 
       $create_account = '<!-- Start create_account_introduction start -->' . "\n";

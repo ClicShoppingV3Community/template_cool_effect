@@ -16,8 +16,8 @@
   class ca_create_account_simple_invisible_antispam {
     public string $code;
     public string $group;
-    public string $title;
-    public string $description;
+    public $title;
+    public $description;
     public ?int $sort_order = 0;
     public bool $enabled = false;
 
@@ -41,7 +41,7 @@
     public function execute() {
       $CLICSHOPPING_Template = Registry::get('Template');
 
-      if (isset($_GET['Account']) && isset($_GET['Create']) && !isset($_GET['Success'])) {
+      if (isset($_GET['Account'], $_GET['Create']) && !isset($_GET['Success'])) {
         $create_account_invisible_antispam = '<!--  create_account_invisible_invisible_antispam start -->' . "\n";
         $create_account_invisible_antispam .= HTML::inputField('invisible_clicshopping', '', 'id="hiddenRecaptcha"', null, null, 'hiddenRecaptcha');
 
